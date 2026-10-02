@@ -1,6 +1,7 @@
 ---
 name: update-github-info
 description: Refresh the GitHub Info page with concise, practical updates from official GitHub sources.
+
 engine:
   id: copilot
   model: gpt-4.1
