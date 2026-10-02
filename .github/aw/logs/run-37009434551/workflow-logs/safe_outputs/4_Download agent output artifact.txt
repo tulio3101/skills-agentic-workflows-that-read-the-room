@@ -1,0 +1,50 @@
+﻿2026-10-02T12:56:55.4493202Z ##[group]Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+2026-10-02T12:56:55.4494171Z with:
+2026-10-02T12:56:55.4494673Z   pattern: {agent,agent-output-fallback}
+2026-10-02T12:56:55.4495305Z   merge-multiple: true
+2026-10-02T12:56:55.4501124Z   path: /tmp/gh-aw/
+2026-10-02T12:56:55.4501996Z   repository: tulio3101/skills-agentic-workflows-that-read-the-room
+2026-10-02T12:56:55.4502765Z   run-id: 37009434551
+2026-10-02T12:56:55.4503384Z   skip-decompress: false
+2026-10-02T12:56:55.4503922Z   digest-mismatch: error
+2026-10-02T12:56:55.4504413Z env:
+2026-10-02T12:56:55.4511569Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-02T12:56:55.4512349Z   OTEL_SERVICE_NAME: gh-aw.update-github-info
+2026-10-02T12:56:55.4515881Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=update-github-info,gh-aw.repository=tulio3101/skills-agentic-workflows-that-read-the-room,gh-aw.run.id=37009434551,github.run_id=37009434551,gh-aw.engine.id=copilot
+2026-10-02T12:56:55.4518159Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-02T12:56:55.4518832Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-02T12:56:55.4519482Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-02T12:56:55.4520023Z   GH_AW_AGENT_AIC: 
+2026-10-02T12:56:55.4520484Z   GH_AW_AIC: 
+2026-10-02T12:56:55.4521196Z   GH_AW_AMBIENT_CONTEXT: 
+2026-10-02T12:56:55.4522116Z   GH_AW_CALLER_WORKFLOW_ID: tulio3101/skills-agentic-workflows-that-read-the-room/update-github-info
+2026-10-02T12:56:55.4523127Z   GH_AW_DETECTION_CONCLUSION: warning
+2026-10-02T12:56:55.4523742Z   GH_AW_DETECTION_REASON: agent_failure
+2026-10-02T12:56:55.4524340Z   GH_AW_ENGINE_ID: copilot
+2026-10-02T12:56:55.4524865Z   GH_AW_ENGINE_MODEL: gpt-4o
+2026-10-02T12:56:55.4525399Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-02T12:56:55.4528472Z   GH_AW_THREAT_DETECTION_AIC: 
+2026-10-02T12:56:55.4529427Z   GH_AW_WORKFLOW_ID: update-github-info
+2026-10-02T12:56:55.4530265Z   GH_AW_WORKFLOW_NAME: update-github-info
+2026-10-02T12:56:55.4532412Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/tulio3101/skills-agentic-workflows-that-read-the-room/blob/main/.github/workflows/update-github-info.md
+2026-10-02T12:56:55.4544431Z   GITHUB_AW_OTEL_TRACE_ID: 9fa952b16203220e216a5b911ab52033
+2026-10-02T12:56:55.4545226Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: b58902fa89a85370
+2026-10-02T12:56:55.4545896Z   GITHUB_AW_OTEL_JOB_START_MS: 1790945815386
+2026-10-02T12:56:55.4546496Z ##[endgroup]
+2026-10-02T12:56:56.2260611Z Found 5 artifact(s)
+2026-10-02T12:56:56.2273423Z Filtering artifacts by pattern '{agent,agent-output-fallback}'
+2026-10-02T12:56:56.2320113Z Preparing to download the following artifacts:
+2026-10-02T12:56:56.2326369Z - agent-output-fallback (ID: 11227023551, Size: 583, Expected Digest: sha256:f031bfd32fe03a4614d5a7e3a23fbb9b19924e9d615032561acdfa61443d66bc)
+2026-10-02T12:56:56.2335929Z - agent (ID: 11226959301, Size: 196403, Expected Digest: sha256:ed0eb14e9792de03ce9513d714fddd534f1b8858e431192db37268846cc28c96)
+2026-10-02T12:56:56.6981147Z Redirecting to blob download url: https://productionresultssa3.blob.core.windows.net/actions-results/0c09c102-3900-42d6-bc77-b2f4cbf795f3/workflow-job-run-afb79bcb-a999-581c-b38e-9a724f031ec3/artifacts/daa0da78a4f899948f184de1c2267d4cff63de5d280692a88333f56508605a86.zip
+2026-10-02T12:56:56.6984795Z Starting download of artifact to: /tmp/gh-aw
+2026-10-02T12:56:56.7056080Z Redirecting to blob download url: https://productionresultssa3.blob.core.windows.net/actions-results/0c09c102-3900-42d6-bc77-b2f4cbf795f3/workflow-job-run-afb79bcb-a999-581c-b38e-9a724f031ec3/artifacts/d4f0bc5a29de06b510f9aa428f1eedba926012b591fef7a518e776a7c9bd1824.zip
+2026-10-02T12:56:56.7059608Z Starting download of artifact to: /tmp/gh-aw
+2026-10-02T12:56:56.9325689Z (node:1539) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-02T12:56:56.9327894Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-02T12:56:56.9528132Z SHA256 digest of downloaded artifact is f031bfd32fe03a4614d5a7e3a23fbb9b19924e9d615032561acdfa61443d66bc
+2026-10-02T12:56:56.9533110Z Artifact download completed successfully.
+2026-10-02T12:56:57.1639992Z SHA256 digest of downloaded artifact is ed0eb14e9792de03ce9513d714fddd534f1b8858e431192db37268846cc28c96
+2026-10-02T12:56:57.1643677Z Artifact download completed successfully.
+2026-10-02T12:56:57.1645379Z Total of 2 artifact(s) downloaded
+2026-10-02T12:56:57.1654360Z Download artifact has finished successfully

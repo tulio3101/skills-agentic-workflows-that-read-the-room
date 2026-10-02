@@ -1,0 +1,34 @@
+﻿2026-10-02T12:54:17.5236562Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+2026-10-02T12:54:17.5238111Z with:
+2026-10-02T12:54:17.5239212Z   name: info
+2026-10-02T12:54:17.5240545Z   path: /tmp/gh-aw/aw_info.json
+2026-10-02T12:54:17.5241618Z   if-no-files-found: ignore
+2026-10-02T12:54:17.5242624Z   compression-level: 6
+2026-10-02T12:54:17.5243561Z   overwrite: false
+2026-10-02T12:54:17.5244509Z   include-hidden-files: false
+2026-10-02T12:54:17.5245517Z   archive: true
+2026-10-02T12:54:17.5246398Z env:
+2026-10-02T12:54:17.5247262Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-02T12:54:17.5248788Z   OTEL_SERVICE_NAME: gh-aw.update-github-info
+2026-10-02T12:54:17.5252036Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=update-github-info,gh-aw.repository=tulio3101/skills-agentic-workflows-that-read-the-room,gh-aw.run.id=37009434551,github.run_id=37009434551,gh-aw.engine.id=copilot
+2026-10-02T12:54:17.5255221Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-02T12:54:17.5256318Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-02T12:54:17.5257568Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-02T12:54:17.5258792Z   GH_AW_MAX_DAILY_AI_CREDITS: 5000
+2026-10-02T12:54:17.5259878Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-02T12:54:17.5261025Z   GITHUB_AW_OTEL_TRACE_ID: 9fa952b16203220e216a5b911ab52033
+2026-10-02T12:54:17.5262425Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 17924c4c1d8a5f2e
+2026-10-02T12:54:17.5263787Z   GITHUB_AW_OTEL_JOB_START_MS: 1790945648259
+2026-10-02T12:54:17.5264901Z ##[endgroup]
+2026-10-02T12:54:17.7346942Z With the provided path, there will be 1 file uploaded
+2026-10-02T12:54:17.7359232Z Artifact name is valid!
+2026-10-02T12:54:17.7363431Z Root directory input is valid!
+2026-10-02T12:54:18.0193081Z Uploading artifact: info.zip
+2026-10-02T12:54:18.0264884Z Beginning upload of artifact content to blob storage
+2026-10-02T12:54:18.2506799Z Uploaded bytes 609
+2026-10-02T12:54:18.2949553Z Finished uploading artifact content to blob storage!
+2026-10-02T12:54:18.2956253Z SHA256 digest of uploaded artifact is 919526f666ba6e557ed83bf8c70f7a584de4bfa932e8a933541b05f96f9661e9
+2026-10-02T12:54:18.2961401Z Finalizing artifact upload
+2026-10-02T12:54:18.5935629Z Artifact info successfully finalized. Artifact ID 11227416507
+2026-10-02T12:54:18.5937718Z Artifact info has been successfully uploaded! Final size is 609 bytes. Artifact ID is 11227416507
+2026-10-02T12:54:18.5951212Z Artifact download URL: https://github.com/tulio3101/skills-agentic-workflows-that-read-the-room/actions/runs/37009434551/artifacts/11227416507

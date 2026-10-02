@@ -1,0 +1,24 @@
+﻿2026-10-02T12:54:10.2063096Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+2026-10-02T12:54:10.2064994Z with:
+2026-10-02T12:54:10.2065509Z   name: aic-usage-scan-v2
+2026-10-02T12:54:10.2066540Z   path: /tmp/gh-aw/agentic-workflow-usage-scan-v2.jsonl
+2026-10-02T12:54:10.2068787Z   overwrite: true
+2026-10-02T12:54:10.2069340Z   if-no-files-found: ignore
+2026-10-02T12:54:10.2070134Z   retention-days: 3
+2026-10-02T12:54:10.2071845Z   compression-level: 6
+2026-10-02T12:54:10.2072667Z   include-hidden-files: false
+2026-10-02T12:54:10.2073415Z   archive: true
+2026-10-02T12:54:10.2074079Z env:
+2026-10-02T12:54:10.2074537Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-02T12:54:10.2075826Z   OTEL_SERVICE_NAME: gh-aw.update-github-info
+2026-10-02T12:54:10.2077864Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=update-github-info,gh-aw.repository=tulio3101/skills-agentic-workflows-that-read-the-room,gh-aw.run.id=37009434551,github.run_id=37009434551,gh-aw.engine.id=copilot
+2026-10-02T12:54:10.2080697Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-02T12:54:10.2082658Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-02T12:54:10.2083490Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-02T12:54:10.2084074Z   GH_AW_MAX_DAILY_AI_CREDITS: 5000
+2026-10-02T12:54:10.2085872Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-02T12:54:10.2086861Z   GITHUB_AW_OTEL_TRACE_ID: 9fa952b16203220e216a5b911ab52033
+2026-10-02T12:54:10.2088774Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 17924c4c1d8a5f2e
+2026-10-02T12:54:10.2090555Z   GITHUB_AW_OTEL_JOB_START_MS: 1790945648259
+2026-10-02T12:54:10.2091244Z ##[endgroup]
+2026-10-02T12:54:10.6971355Z No files were found with the provided path: /tmp/gh-aw/agentic-workflow-usage-scan-v2.jsonl. No artifacts will be uploaded.

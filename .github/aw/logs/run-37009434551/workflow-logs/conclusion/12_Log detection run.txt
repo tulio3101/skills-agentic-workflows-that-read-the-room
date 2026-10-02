@@ -1,0 +1,41 @@
+﻿2026-10-02T12:57:20.6923459Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-02T12:57:20.6925132Z with:
+2026-10-02T12:57:20.6934362Z   github-token: ***
+2026-10-02T12:57:20.6940757Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'handle_detection_runs.cjs'));
+await main();
+
+2026-10-02T12:57:20.6945854Z   debug: false
+2026-10-02T12:57:20.6946836Z   user-agent: actions/github-script
+2026-10-02T12:57:20.6948009Z   result-encoding: json
+2026-10-02T12:57:20.6948988Z   retries: 0
+2026-10-02T12:57:20.6950255Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-02T12:57:20.6951733Z env:
+2026-10-02T12:57:20.6952633Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-02T12:57:20.6953825Z   OTEL_SERVICE_NAME: gh-aw.update-github-info
+2026-10-02T12:57:20.6957378Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=update-github-info,gh-aw.repository=tulio3101/skills-agentic-workflows-that-read-the-room,gh-aw.run.id=37009434551,github.run_id=37009434551,gh-aw.engine.id=copilot
+2026-10-02T12:57:20.6961085Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-02T12:57:20.6962318Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-02T12:57:20.6963612Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-02T12:57:20.6964804Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-02T12:57:20.6966067Z   GITHUB_AW_OTEL_TRACE_ID: 9fa952b16203220e216a5b911ab52033
+2026-10-02T12:57:20.6967574Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: daf7fb36ec96f1fa
+2026-10-02T12:57:20.6968944Z   GITHUB_AW_OTEL_JOB_START_MS: 1790945834642
+2026-10-02T12:57:20.6970318Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-10-02T12:57:20.6971860Z   GH_AW_WORKFLOW_NAME: update-github-info
+2026-10-02T12:57:20.6974537Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/tulio3101/skills-agentic-workflows-that-read-the-room/blob/main/.github/workflows/update-github-info.md
+2026-10-02T12:57:20.6978608Z   GH_AW_RUN_URL: https://github.com/tulio3101/skills-agentic-workflows-that-read-the-room/actions/runs/37009434551
+2026-10-02T12:57:20.6980951Z   GH_AW_DETECTION_CONCLUSION: warning
+2026-10-02T12:57:20.6982188Z   GH_AW_DETECTION_REASON: agent_failure
+2026-10-02T12:57:20.6983979Z ##[endgroup]
+2026-10-02T12:57:20.8408542Z Detection conclusion: warning
+2026-10-02T12:57:20.8415914Z Detection reason: agent_failure
+2026-10-02T12:57:20.8423914Z Workflow name: update-github-info
+2026-10-02T12:57:20.8428971Z Run URL: https://github.com/tulio3101/skills-agentic-workflows-that-read-the-room/actions/runs/37009434551
+2026-10-02T12:57:20.8441392Z Detection problem detected (warning), posting to tracking issue
+2026-10-02T12:57:20.8452772Z Searching for detection runs issue: "[aw] Detection Runs"
+2026-10-02T12:57:21.3786076Z Found existing detection runs issue #5: https://github.com/tulio3101/skills-agentic-workflows-that-read-the-room/issues/5
+2026-10-02T12:57:22.0194402Z ✓ Posted detection run comment to issue #5

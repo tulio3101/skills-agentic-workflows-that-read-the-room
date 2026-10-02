@@ -1,0 +1,182 @@
+﻿2026-10-02T12:54:55.4035983Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-02T12:54:55.4036439Z with:
+2026-10-02T12:54:55.4037664Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'generate_safe_outputs_tools.cjs'));
+await main();
+
+2026-10-02T12:54:55.4041952Z   github-token: ***
+2026-10-02T12:54:55.4042199Z   debug: false
+2026-10-02T12:54:55.4042475Z   user-agent: actions/github-script
+2026-10-02T12:54:55.4042771Z   result-encoding: json
+2026-10-02T12:54:55.4043004Z   retries: 0
+2026-10-02T12:54:55.4043253Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-02T12:54:55.4043559Z env:
+2026-10-02T12:54:55.4043765Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-02T12:54:55.4044055Z   OTEL_SERVICE_NAME: gh-aw.update-github-info
+2026-10-02T12:54:55.4044997Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=update-github-info,gh-aw.repository=tulio3101/skills-agentic-workflows-that-read-the-room,gh-aw.run.id=37009434551,github.run_id=37009434551,gh-aw.engine.id=copilot
+2026-10-02T12:54:55.4045939Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-02T12:54:55.4046231Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-02T12:54:55.4046539Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-02T12:54:55.4046789Z   DEFAULT_BRANCH: main
+2026-10-02T12:54:55.4047023Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-10-02T12:54:55.4047282Z   GH_AW_ASSETS_BRANCH: 
+2026-10-02T12:54:55.4047704Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-10-02T12:54:55.4047996Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-10-02T12:54:55.4064681Z   GH_AW_PR_HEAD_BASE_BRANCH: 
+2026-10-02T12:54:55.4065181Z   GH_AW_PR_HEAD_BASE_PR_NUMBER: 
+2026-10-02T12:54:55.4065675Z   GH_AW_PR_HEAD_BASE_REF: 
+2026-10-02T12:54:55.4066075Z   GH_AW_PR_HEAD_BASE_REPO: 
+2026-10-02T12:54:55.4066469Z   GH_AW_PR_HEAD_BASE_SHA: 
+2026-10-02T12:54:55.4066865Z   GH_AW_PR_HEAD_REPO: 
+2026-10-02T12:54:55.4067233Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-02T12:54:55.4067674Z   GH_AW_WORKFLOW_ID_SANITIZED: updategithubinfo
+2026-10-02T12:54:55.4068275Z   GITHUB_AW_OTEL_TRACE_ID: 9fa952b16203220e216a5b911ab52033
+2026-10-02T12:54:55.4068885Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 1d1ebd5615e2b455
+2026-10-02T12:54:55.4069608Z   GITHUB_AW_OTEL_JOB_START_MS: 1790945672274
+2026-10-02T12:54:55.4071071Z   GH_AW_TOOLS_META_JSON: {
+  "description_suffixes": {
+    "create_pull_request": " CONSTRAINTS: Maximum 1 pull request(s) can be created. PRs will be created as drafts."
+  },
+  "repo_params": {},
+  "dynamic_tools": []
+}
+
+2026-10-02T12:54:55.4083816Z   GH_AW_VALIDATION_JSON: {
+  "create_pull_request": {
+    "defaultMax": 1,
+    "fields": {
+      "base": {
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 128
+      },
+      "body": {
+        "required": true,
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 65000
+      },
+      "branch": {
+        "required": true,
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 256
+      },
+      "dependencies": {
+        "type": "array",
+        "itemType": "string",
+        "itemSanitize": true,
+        "itemMaxLength": 256
+      },
+      "draft": {
+        "type": "boolean"
+      },
+      "labels": {
+        "type": "array",
+        "itemType": "string",
+        "itemSanitize": true,
+        "itemMaxLength": 128
+      },
+      "repo": {
+        "type": "string",
+        "maxLength": 256
+      },
+      "stack_position": {
+        "optionalPositiveInteger": true
+      },
+      "stack_root": {
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 256
+      },
+      "temporary_id": {
+        "type": "string",
+        "pattern": "^#?aw_[A-Za-z0-9_]{3,12}$"
+      },
+      "title": {
+        "required": true,
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 128
+      }
+    }
+  },
+  "missing_data": {
+    "defaultMax": 20,
+    "fields": {
+      "alternatives": {
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 256
+      },
+      "context": {
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 256
+      },
+      "data_type": {
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 128
+      },
+      "reason": {
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 256
+      }
+    }
+  },
+  "missing_tool": {
+    "defaultMax": 20,
+    "fields": {
+      "alternatives": {
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 512
+      },
+      "reason": {
+        "required": true,
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 256
+      },
+      "tool": {
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 128
+      }
+    }
+  },
+  "noop": {
+    "defaultMax": 1,
+    "fields": {
+      "message": {
+        "required": true,
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 65000
+      }
+    }
+  },
+  "report_incomplete": {
+    "defaultMax": 5,
+    "fields": {
+      "details": {
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 65000
+      },
+      "reason": {
+        "required": true,
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 1024
+      }
+    }
+  }
+}
+
+2026-10-02T12:54:55.4096331Z ##[endgroup]

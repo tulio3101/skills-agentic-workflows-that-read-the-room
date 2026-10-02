@@ -1,0 +1,30 @@
+﻿2026-10-02T12:54:09.3535703Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-02T12:54:09.3539068Z with:
+2026-10-02T12:54:09.3544917Z   github-token: ***
+2026-10-02T12:54:09.3547759Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'restore_aic_scan_cache.cjs'));
+await main();
+
+2026-10-02T12:54:09.3553291Z   debug: false
+2026-10-02T12:54:09.3553944Z   user-agent: actions/github-script
+2026-10-02T12:54:09.3555042Z   result-encoding: json
+2026-10-02T12:54:09.3555566Z   retries: 0
+2026-10-02T12:54:09.3556102Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-02T12:54:09.3557197Z env:
+2026-10-02T12:54:09.3557675Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-02T12:54:09.3558518Z   OTEL_SERVICE_NAME: gh-aw.update-github-info
+2026-10-02T12:54:09.3561880Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=update-github-info,gh-aw.repository=tulio3101/skills-agentic-workflows-that-read-the-room,gh-aw.run.id=37009434551,github.run_id=37009434551,gh-aw.engine.id=copilot
+2026-10-02T12:54:09.3566034Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-02T12:54:09.3567160Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-02T12:54:09.3567845Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-02T12:54:09.3569029Z   GH_AW_MAX_DAILY_AI_CREDITS: 5000
+2026-10-02T12:54:09.3569632Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-02T12:54:09.3570292Z   GITHUB_AW_OTEL_TRACE_ID: 9fa952b16203220e216a5b911ab52033
+2026-10-02T12:54:09.3571052Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 17924c4c1d8a5f2e
+2026-10-02T12:54:09.3572151Z   GITHUB_AW_OTEL_JOB_START_MS: 1790945648259
+2026-10-02T12:54:09.3572784Z   GH_AW_HAS_SLASH_COMMAND: false
+2026-10-02T12:54:09.3573378Z   GH_AW_HAS_LABEL_COMMAND: false
+2026-10-02T12:54:09.3575049Z ##[endgroup]

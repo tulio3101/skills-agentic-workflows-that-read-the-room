@@ -1,0 +1,40 @@
+﻿2026-10-02T12:57:20.4994612Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-02T12:57:20.4996358Z with:
+2026-10-02T12:57:20.5006344Z   github-token: ***
+2026-10-02T12:57:20.5011394Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'handle_noop_message.cjs'));
+await main();
+
+2026-10-02T12:57:20.5016375Z   debug: false
+2026-10-02T12:57:20.5017358Z   user-agent: actions/github-script
+2026-10-02T12:57:20.5034058Z   result-encoding: json
+2026-10-02T12:57:20.5035252Z   retries: 0
+2026-10-02T12:57:20.5036323Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-02T12:57:20.5037640Z env:
+2026-10-02T12:57:20.5038547Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-02T12:57:20.5039790Z   OTEL_SERVICE_NAME: gh-aw.update-github-info
+2026-10-02T12:57:20.5043854Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=update-github-info,gh-aw.repository=tulio3101/skills-agentic-workflows-that-read-the-room,gh-aw.run.id=37009434551,github.run_id=37009434551,gh-aw.engine.id=copilot
+2026-10-02T12:57:20.5048467Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-02T12:57:20.5049739Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-02T12:57:20.5051322Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-02T12:57:20.5052482Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-02T12:57:20.5054384Z   GITHUB_AW_OTEL_TRACE_ID: 9fa952b16203220e216a5b911ab52033
+2026-10-02T12:57:20.5055964Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: daf7fb36ec96f1fa
+2026-10-02T12:57:20.5057381Z   GITHUB_AW_OTEL_JOB_START_MS: 1790945834642
+2026-10-02T12:57:20.5058774Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-10-02T12:57:20.5060109Z   GH_AW_NOOP_MAX: 1
+2026-10-02T12:57:20.5061375Z   GH_AW_WORKFLOW_NAME: update-github-info
+2026-10-02T12:57:20.5064164Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/tulio3101/skills-agentic-workflows-that-read-the-room/blob/main/.github/workflows/update-github-info.md
+2026-10-02T12:57:20.5070053Z   GH_AW_RUN_URL: https://github.com/tulio3101/skills-agentic-workflows-that-read-the-room/actions/runs/37009434551
+2026-10-02T12:57:20.5072579Z   GH_AW_AGENT_CONCLUSION: failure
+2026-10-02T12:57:20.5073780Z   GH_AW_NOOP_REPORT_AS_ISSUE: false
+2026-10-02T12:57:20.5074944Z   GH_AW_AIC: 
+2026-10-02T12:57:20.5075880Z   GH_AW_THREAT_DETECTION_AIC: 
+2026-10-02T12:57:20.5077003Z   GH_AW_AMBIENT_CONTEXT: 
+2026-10-02T12:57:20.5078122Z   GH_AW_WORKFLOW_ID: update-github-info
+2026-10-02T12:57:20.5079320Z ##[endgroup]
+2026-10-02T12:57:20.6665679Z Agent output content length: 24
+2026-10-02T12:57:20.6673943Z No noop items found in agent output

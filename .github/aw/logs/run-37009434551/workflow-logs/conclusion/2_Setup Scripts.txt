@@ -1,0 +1,34 @@
+﻿2026-10-02T12:57:10.5088482Z ##[group]Run github/gh-aw-actions/setup@924af5fdc64061cfbf66fb584c8b07e2ac230c60
+2026-10-02T12:57:10.5089873Z with:
+2026-10-02T12:57:10.5090388Z   destination: /home/runner/work/_temp/gh-aw/actions
+2026-10-02T12:57:10.5091337Z   job-name: conclusion
+2026-10-02T12:57:10.5091826Z   trace-id: 9fa952b16203220e216a5b911ab52033
+2026-10-02T12:57:10.5092389Z   parent-span-id: 17924c4c1d8a5f2e
+2026-10-02T12:57:10.5092926Z   safe-output-artifact-client: false
+2026-10-02T12:57:10.5093678Z env:
+2026-10-02T12:57:10.5094112Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-02T12:57:10.5094813Z   OTEL_SERVICE_NAME: gh-aw.update-github-info
+2026-10-02T12:57:10.5096410Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=update-github-info,gh-aw.repository=tulio3101/skills-agentic-workflows-that-read-the-room,gh-aw.run.id=37009434551,github.run_id=37009434551,gh-aw.engine.id=copilot
+2026-10-02T12:57:10.5097955Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-02T12:57:10.5098513Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-02T12:57:10.5099154Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-02T12:57:10.5099648Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-02T12:57:10.5100172Z   GH_AW_SETUP_WORKFLOW_NAME: update-github-info
+2026-10-02T12:57:10.5101609Z   GH_AW_CURRENT_WORKFLOW_REF: tulio3101/skills-agentic-workflows-that-read-the-room/.github/workflows/update-github-info.lock.yml@refs/heads/main
+2026-10-02T12:57:10.5102776Z   GH_AW_INFO_VERSION: 1.0.87
+2026-10-02T12:57:10.5103268Z   GH_AW_INFO_AWF_VERSION: v0.28.23
+2026-10-02T12:57:10.5103780Z   GH_AW_INFO_ENGINE_ID: copilot
+2026-10-02T12:57:10.5104261Z ##[endgroup]
+2026-10-02T12:57:13.5343691Z Successfully copied 515 files to /home/runner/work/_temp/gh-aw/actions
+2026-10-02T12:57:13.9639149Z Successfully copied 26 mcp-scripts files to /home/runner/work/_temp/gh-aw/mcp-scripts
+2026-10-02T12:57:14.1662590Z Successfully copied 88 safe-outputs files to /home/runner/work/_temp/gh-aw/safeoutputs
+2026-10-02T12:57:14.6329051Z [info] [otlp] INPUT_TRACE_ID=9fa952b16203220e216a5b911ab52033 (will reuse activation trace)
+2026-10-02T12:57:14.6336727Z [info] [otlp] INPUT_PARENT_SPAN_ID=17924c4c1d8a5f2e (will parent setup span)
+2026-10-02T12:57:14.6344197Z [info] [otlp] no OTLP endpoints have usable credentials, skipping setup span
+2026-10-02T12:57:14.6384177Z [info] [otlp] resolved trace-id=9fa952b16203220e216a5b911ab52033
+2026-10-02T12:57:14.6389536Z [info] [otlp] trace-id=9fa952b16203220e216a5b911ab52033 written to GITHUB_OUTPUT
+2026-10-02T12:57:14.6397330Z [info] [otlp] span-id=daf7fb36ec96f1fa written to GITHUB_OUTPUT
+2026-10-02T12:57:14.6401510Z [info] [otlp] parent-span-id=17924c4c1d8a5f2e written to GITHUB_OUTPUT
+2026-10-02T12:57:14.6406316Z [info] [otlp] GITHUB_AW_OTEL_TRACE_ID written to GITHUB_ENV
+2026-10-02T12:57:14.6409973Z [info] [otlp] GITHUB_AW_OTEL_PARENT_SPAN_ID written to GITHUB_ENV
+2026-10-02T12:57:14.6415569Z [info] [otlp] GITHUB_AW_OTEL_JOB_START_MS written to GITHUB_ENV

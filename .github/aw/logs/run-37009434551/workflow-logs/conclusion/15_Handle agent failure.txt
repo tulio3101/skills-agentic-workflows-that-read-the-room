@@ -1,0 +1,126 @@
+﻿2026-10-02T12:57:22.4099411Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-02T12:57:22.4101345Z with:
+2026-10-02T12:57:22.4119550Z   github-token: ***
+2026-10-02T12:57:22.4124622Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'handle_agent_failure.cjs'));
+await main();
+
+2026-10-02T12:57:22.4129195Z   debug: false
+2026-10-02T12:57:22.4130120Z   user-agent: actions/github-script
+2026-10-02T12:57:22.4131417Z   result-encoding: json
+2026-10-02T12:57:22.4132378Z   retries: 0
+2026-10-02T12:57:22.4133375Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-02T12:57:22.4134577Z env:
+2026-10-02T12:57:22.4135438Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-02T12:57:22.4136593Z   OTEL_SERVICE_NAME: gh-aw.update-github-info
+2026-10-02T12:57:22.4140006Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=update-github-info,gh-aw.repository=tulio3101/skills-agentic-workflows-that-read-the-room,gh-aw.run.id=37009434551,github.run_id=37009434551,gh-aw.engine.id=copilot
+2026-10-02T12:57:22.4144384Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-02T12:57:22.4145695Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-02T12:57:22.4147203Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-02T12:57:22.4148255Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-02T12:57:22.4149454Z   GITHUB_AW_OTEL_TRACE_ID: 9fa952b16203220e216a5b911ab52033
+2026-10-02T12:57:22.4151071Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: daf7fb36ec96f1fa
+2026-10-02T12:57:22.4152394Z   GITHUB_AW_OTEL_JOB_START_MS: 1790945834642
+2026-10-02T12:57:22.4153682Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-10-02T12:57:22.4154964Z   GH_AW_WORKFLOW_NAME: update-github-info
+2026-10-02T12:57:22.4157513Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/tulio3101/skills-agentic-workflows-that-read-the-room/blob/main/.github/workflows/update-github-info.md
+2026-10-02T12:57:22.4161103Z   GH_AW_RUN_URL: https://github.com/tulio3101/skills-agentic-workflows-that-read-the-room/actions/runs/37009434551
+2026-10-02T12:57:22.4163179Z   GH_AW_AGENT_CONCLUSION: failure
+2026-10-02T12:57:22.4164316Z   GH_AW_WORKFLOW_ID: update-github-info
+2026-10-02T12:57:22.4165536Z   GH_AW_ACTION_FAILURE_ISSUE_EXPIRES_HOURS: 0
+2026-10-02T12:57:22.4166739Z   GH_AW_ENGINE_ID: copilot
+2026-10-02T12:57:22.4167817Z   GH_AW_SECRET_VERIFICATION_RESULT: success
+2026-10-02T12:57:22.4173606Z   GH_AW_ENGINE_SECRET_FAILURE_MESSAGE: **Alternative**: If your organization has a Copilot subscription, you can avoid the need for a personal access token by adding a top-level `permissions` block to your workflow file. This enables Copilot inference through the org using the built-in GitHub Actions token.
+
+```yaml
+permissions:
+  copilot-requests: write
+```
+
+See: https://github.github.com/gh-aw/reference/engines/#github-copilot-default
+2026-10-02T12:57:22.4179324Z   GH_AW_CHECKOUT_PR_SUCCESS: true
+2026-10-02T12:57:22.4180481Z   GH_AW_AI_CREDITS_RATE_LIMIT_ERROR: false
+2026-10-02T12:57:22.4181839Z   GH_AW_UNKNOWN_MODEL_AI_CREDITS: false
+2026-10-02T12:57:22.4182943Z   GH_AW_AIC: 
+2026-10-02T12:57:22.4183837Z   GH_AW_THREAT_DETECTION_AIC: 
+2026-10-02T12:57:22.4184912Z   GH_AW_MAX_AI_CREDITS: 1000
+2026-10-02T12:57:22.4185988Z   GH_AW_INFERENCE_ACCESS_ERROR: false
+2026-10-02T12:57:22.4187133Z   GH_AW_MCP_POLICY_ERROR: false
+2026-10-02T12:57:22.4188210Z   GH_AW_AGENTIC_ENGINE_TIMEOUT: false
+2026-10-02T12:57:22.4189378Z   GH_AW_MODEL_NOT_SUPPORTED_ERROR: false
+2026-10-02T12:57:22.4190551Z   GH_AW_HTTP_400_RESPONSE_ERROR: false
+2026-10-02T12:57:22.4191882Z   GH_AW_MAX_CACHE_MISSES_EXCEEDED: false
+2026-10-02T12:57:22.4193075Z   GH_AW_MISSING_MODEL_PRICING_ERROR: false
+2026-10-02T12:57:22.4194285Z   GH_AW_MISSING_MODEL_PRICING_MODEL_NAME: 
+2026-10-02T12:57:22.4195531Z   GH_AW_SHELL_EXPANSION_GUARD_REJECTED: false
+2026-10-02T12:57:22.4198278Z   GH_AW_ENGINE_API_HOSTS: api.enterprise.githubcopilot.com,api.githubcopilot.com,api.business.githubcopilot.com,api.individual.githubcopilot.com
+2026-10-02T12:57:22.4202071Z   GH_AW_CODE_PUSH_FAILURE_ERRORS: 
+2026-10-02T12:57:22.4203228Z   GH_AW_CODE_PUSH_FAILURE_COUNT: 
+2026-10-02T12:57:22.4204348Z   GH_AW_LOCKDOWN_CHECK_FAILED: false
+2026-10-02T12:57:22.4205514Z   GH_AW_OAUTH_TOKEN_CHECK_FAILED: false
+2026-10-02T12:57:22.4206674Z   GH_AW_STALE_LOCK_FILE_FAILED: false
+2026-10-02T12:57:22.4207832Z   GH_AW_DAILY_AI_CREDITS_EXCEEDED: false
+2026-10-02T12:57:22.4209079Z   GH_AW_DAILY_AI_CREDITS_GUARDRAIL_STATUS: skipped
+2026-10-02T12:57:22.4210363Z   GH_AW_DAILY_AI_CREDITS_GUARDRAIL_ERROR: 
+2026-10-02T12:57:22.4211823Z   GH_AW_DAILY_AI_CREDITS_TOTAL: 
+2026-10-02T12:57:22.4212989Z   GH_AW_DAILY_AI_CREDITS_THRESHOLD: 
+2026-10-02T12:57:22.4214200Z   GH_AW_DAILY_AI_CREDITS_CONTINUE_ON_ERROR: false
+2026-10-02T12:57:22.4215436Z   GH_AW_GROUP_REPORTS: false
+2026-10-02T12:57:22.4216511Z   GH_AW_FAILURE_REPORT_AS_ISSUE: true
+2026-10-02T12:57:22.4217699Z   GH_AW_MISSING_TOOL_REPORT_AS_FAILURE: true
+2026-10-02T12:57:22.4218943Z   GH_AW_MISSING_DATA_REPORT_AS_FAILURE: true
+2026-10-02T12:57:22.4220127Z   GH_AW_TIMEOUT_MINUTES: 20
+2026-10-02T12:57:22.4221273Z ##[endgroup]
+2026-10-02T12:57:22.5995657Z [ai-credits] aiCredits source=none GH_AW_AIC=(unset)
+2026-10-02T12:57:22.6007950Z [ai-credits] maxAICredits source=env(GH_AW_MAX_AI_CREDITS) value=1000
+2026-10-02T12:57:22.6014261Z [ai-credits] rateLimitSignal source=none
+2026-10-02T12:57:22.6106887Z Agent conclusion: failure
+2026-10-02T12:57:22.6109508Z Workflow name: update-github-info
+2026-10-02T12:57:22.6112421Z Workflow ID: update-github-info
+2026-10-02T12:57:22.6114835Z Secret verification result: success
+2026-10-02T12:57:22.6117220Z Engine secret failure message: (set)
+2026-10-02T12:57:22.6120279Z Assignment error count: 0
+2026-10-02T12:57:22.6124355Z Assign copilot failure count: 0
+2026-10-02T12:57:22.6126622Z Skill install failure count: 0
+2026-10-02T12:57:22.6128668Z Create discussion error count: 0
+2026-10-02T12:57:22.6130682Z Code push failure count: 0
+2026-10-02T12:57:22.6133754Z Checkout PR success: true
+2026-10-02T12:57:22.6135697Z AI credits: (none)
+2026-10-02T12:57:22.6137494Z Configured max AI credits: 1000
+2026-10-02T12:57:22.6155951Z AI credits rate-limit error: false
+2026-10-02T12:57:22.6158307Z Max AI credits exceeded (harness budget abort): false
+2026-10-02T12:57:22.6161965Z Daily workflow AIC guardrail exceeded: false
+2026-10-02T12:57:22.6163604Z Daily workflow AIC guardrail status: skipped; error detail: (none)
+2026-10-02T12:57:22.6165434Z Daily workflow AIC guardrail continue-on-error (warning mode): false
+2026-10-02T12:57:22.6166988Z Inference access error: false
+2026-10-02T12:57:22.6168088Z MCP policy error: false
+2026-10-02T12:57:22.6169108Z Agentic engine timeout: false
+2026-10-02T12:57:22.6170744Z Model not supported error: false
+2026-10-02T12:57:22.6172125Z HTTP 400 response error: false
+2026-10-02T12:57:22.6173291Z Unknown model AI credits error: false
+2026-10-02T12:57:22.6174710Z Unknown model AI credits sources (audit/output): false/false
+2026-10-02T12:57:22.6176310Z Missing model pricing error: false (model: (unknown))
+2026-10-02T12:57:22.6177675Z Shell expansion guard rejected: false
+2026-10-02T12:57:22.6178881Z Push repo-memory result: 
+2026-10-02T12:57:22.6180373Z App token minting failed (safe_outputs/conclusion/activation): false/false/false
+2026-10-02T12:57:22.6182220Z Lockdown check failed: false
+2026-10-02T12:57:22.6183336Z OAuth token check failed: false
+2026-10-02T12:57:22.6184473Z Stale lock file check failed: false
+2026-10-02T12:57:22.6185633Z Cache memory enabled: false
+2026-10-02T12:57:22.6186841Z Cache memory restored (from restore outputs): false
+2026-10-02T12:57:22.6188191Z Missing tool report-as-failure: true
+2026-10-02T12:57:22.6189419Z Missing data report-as-failure: true
+2026-10-02T12:57:22.6190620Z Agent output content length: 24
+2026-10-02T12:57:22.6463385Z Searching for pull request from branch: main
+2026-10-02T12:57:23.0782102Z No pull request found for branch: main
+2026-10-02T12:57:23.0893882Z Parent issue creation is disabled (group-reports: false)
+2026-10-02T12:57:23.0958654Z Checking for existing issue with precise failure metadata for title: "[aw] update-github-info failed"
+2026-10-02T12:57:23.5448135Z No existing issue found, creating a new one
+2026-10-02T12:57:23.8260763Z No specific error patterns found; including last 10 line(s) of agent-stdio.log as fallback
+2026-10-02T12:57:23.8276161Z Generating failure issue footer with aiCredits context: (none)
+2026-10-02T12:57:24.2295222Z [@octokit/request] "POST https://api.github.com/repos/tulio3101/skills-agentic-workflows-that-read-the-room/issues" is deprecated. It is scheduled to be removed on Fri, 10 Mar 2028 00:00:00 GMT. See https://docs.github.com/en/rest/about-the-rest-api/api-versions
+2026-10-02T12:57:24.2315233Z ✓ Created new issue #11: https://github.com/tulio3101/skills-agentic-workflows-that-read-the-room/issues/11
+2026-10-02T12:57:24.8278416Z Cascade check: 4 failure issue(s) in the last 60 min (threshold: 10) — no cascade

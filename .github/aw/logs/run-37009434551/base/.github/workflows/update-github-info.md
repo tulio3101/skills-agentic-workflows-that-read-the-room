@@ -1,9 +1,7 @@
 ---
 name: update-github-info
 description: Refresh the GitHub Info page with concise, practical updates from official GitHub sources.
-engine:
-  id: copilot
-  copilot-sdk: true
+engine: copilot
 model: gpt-4o
 on:
   schedule: daily
