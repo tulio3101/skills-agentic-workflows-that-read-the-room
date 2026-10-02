@@ -1,0 +1,11 @@
+﻿2026-10-02T12:57:00.4048927Z Evaluate and set job outputs
+2026-10-02T12:57:00.4062922Z Set output 'process_safe_outputs_items_applied'
+2026-10-02T12:57:00.4065489Z Set output 'process_safe_outputs_items_cancelled'
+2026-10-02T12:57:00.4066895Z Set output 'process_safe_outputs_items_deferred'
+2026-10-02T12:57:00.4067931Z Set output 'process_safe_outputs_items_failed'
+2026-10-02T12:57:00.4068921Z Set output 'process_safe_outputs_items_skipped'
+2026-10-02T12:57:00.4069897Z Set output 'process_safe_outputs_items_succeeded'
+2026-10-02T12:57:00.4071270Z Set output 'process_safe_outputs_items_warnings'
+2026-10-02T12:57:00.4072286Z Set output 'process_safe_outputs_processed_count'
+2026-10-02T12:57:00.4073245Z Set output 'process_safe_outputs_status'
+2026-10-02T12:57:00.4074830Z Cleaning up orphan processes

@@ -1,0 +1,13 @@
+﻿2026-10-02T12:54:20.5190303Z Evaluate and set job outputs
+2026-10-02T12:54:20.5204356Z Set output 'daily_ai_credits_exceeded'
+2026-10-02T12:54:20.5207369Z Set output 'daily_ai_credits_guardrail_status'
+2026-10-02T12:54:20.5209563Z Set output 'engine_id'
+2026-10-02T12:54:20.5210911Z Set output 'lockdown_check_failed'
+2026-10-02T12:54:20.5212312Z Set output 'model'
+2026-10-02T12:54:20.5213592Z Set output 'oauth_token_check_failed'
+2026-10-02T12:54:20.5215039Z Set output 'secret_verification_result'
+2026-10-02T12:54:20.5216564Z Set output 'setup-parent-span-id'
+2026-10-02T12:54:20.5217986Z Set output 'setup-span-id'
+2026-10-02T12:54:20.5219615Z Set output 'setup-trace-id'
+2026-10-02T12:54:20.5220970Z Set output 'stale_lock_file_failed'
+2026-10-02T12:54:20.5222839Z Cleaning up orphan processes

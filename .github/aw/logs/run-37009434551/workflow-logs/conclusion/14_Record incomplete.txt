@@ -1,0 +1,32 @@
+﻿2026-10-02T12:57:22.2293721Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-02T12:57:22.2296569Z with:
+2026-10-02T12:57:22.2307056Z   github-token: ***
+2026-10-02T12:57:22.2312259Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'report_incomplete_handler.cjs'));
+await main();
+
+2026-10-02T12:57:22.2317592Z   debug: false
+2026-10-02T12:57:22.2319255Z   user-agent: actions/github-script
+2026-10-02T12:57:22.2320475Z   result-encoding: json
+2026-10-02T12:57:22.2321650Z   retries: 0
+2026-10-02T12:57:22.2323298Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-02T12:57:22.2324545Z env:
+2026-10-02T12:57:22.2325473Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-02T12:57:22.2327153Z   OTEL_SERVICE_NAME: gh-aw.update-github-info
+2026-10-02T12:57:22.2331289Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=update-github-info,gh-aw.repository=tulio3101/skills-agentic-workflows-that-read-the-room,gh-aw.run.id=37009434551,github.run_id=37009434551,gh-aw.engine.id=copilot
+2026-10-02T12:57:22.2335311Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-02T12:57:22.2336532Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-02T12:57:22.2338345Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-02T12:57:22.2339458Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-02T12:57:22.2340676Z   GITHUB_AW_OTEL_TRACE_ID: 9fa952b16203220e216a5b911ab52033
+2026-10-02T12:57:22.2342887Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: daf7fb36ec96f1fa
+2026-10-02T12:57:22.2344275Z   GITHUB_AW_OTEL_JOB_START_MS: 1790945834642
+2026-10-02T12:57:22.2345672Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-10-02T12:57:22.2347529Z   GH_AW_REPORT_INCOMPLETE_CREATE_ISSUE: true
+2026-10-02T12:57:22.2348822Z   GH_AW_WORKFLOW_NAME: update-github-info
+2026-10-02T12:57:22.2352131Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/tulio3101/skills-agentic-workflows-that-read-the-room/blob/main/.github/workflows/update-github-info.md
+2026-10-02T12:57:22.2355283Z ##[endgroup]
+2026-10-02T12:57:22.3799186Z Max count: unlimited

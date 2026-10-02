@@ -1,0 +1,56 @@
+﻿2026-10-02T12:54:17.2091524Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-02T12:54:17.2093046Z with:
+2026-10-02T12:54:17.2105624Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+
+const substitutePlaceholders = require(path.join(actionsDir, 'substitute_placeholders.cjs'));
+
+// Call the substitution function
+return await substitutePlaceholders({
+  file: process.env.GH_AW_PROMPT,
+  substitutions: {
+    GH_AW_EXPR_1A3A194A: process.env.GH_AW_EXPR_1A3A194A,
+    GH_AW_EXPR_463A214A: process.env.GH_AW_EXPR_463A214A,
+    GH_AW_EXPR_802A9F6A: process.env.GH_AW_EXPR_802A9F6A,
+    GH_AW_EXPR_FF1D34CE: process.env.GH_AW_EXPR_FF1D34CE,
+    GH_AW_GITHUB_ACTOR: process.env.GH_AW_GITHUB_ACTOR,
+    GH_AW_GITHUB_REPOSITORY: process.env.GH_AW_GITHUB_REPOSITORY,
+    GH_AW_GITHUB_RUN_ID: process.env.GH_AW_GITHUB_RUN_ID,
+    GH_AW_GITHUB_WORKSPACE: process.env.GH_AW_GITHUB_WORKSPACE,
+    GH_AW_MCP_CLI_SERVERS_LIST: process.env.GH_AW_MCP_CLI_SERVERS_LIST
+  }
+});
+
+2026-10-02T12:54:17.2126761Z   github-token: ***
+2026-10-02T12:54:17.2127646Z   debug: false
+2026-10-02T12:54:17.2129986Z   user-agent: actions/github-script
+2026-10-02T12:54:17.2131493Z   result-encoding: json
+2026-10-02T12:54:17.2132394Z   retries: 0
+2026-10-02T12:54:17.2133321Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-02T12:54:17.2134464Z env:
+2026-10-02T12:54:17.2135283Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-02T12:54:17.2136436Z   OTEL_SERVICE_NAME: gh-aw.update-github-info
+2026-10-02T12:54:17.2139772Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=update-github-info,gh-aw.repository=tulio3101/skills-agentic-workflows-that-read-the-room,gh-aw.run.id=37009434551,github.run_id=37009434551,gh-aw.engine.id=copilot
+2026-10-02T12:54:17.2142928Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-02T12:54:17.2144041Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-02T12:54:17.2145237Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-02T12:54:17.2146260Z   GH_AW_MAX_DAILY_AI_CREDITS: 5000
+2026-10-02T12:54:17.2147294Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-02T12:54:17.2148640Z   GITHUB_AW_OTEL_TRACE_ID: 9fa952b16203220e216a5b911ab52033
+2026-10-02T12:54:17.2149983Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 17924c4c1d8a5f2e
+2026-10-02T12:54:17.2151209Z   GITHUB_AW_OTEL_JOB_START_MS: 1790945648259
+2026-10-02T12:54:17.2152569Z   GH_AW_PROMPT: /home/runner/work/_temp/gh-aw/aw-prompts/prompt.txt
+2026-10-02T12:54:17.2159730Z   GH_AW_EXPR_1A3A194A: false
+2026-10-02T12:54:17.2160763Z   GH_AW_EXPR_463A214A: false
+2026-10-02T12:54:17.2161740Z   GH_AW_EXPR_802A9F6A: false
+2026-10-02T12:54:17.2162704Z   GH_AW_EXPR_FF1D34CE: 
+2026-10-02T12:54:17.2163642Z   GH_AW_GITHUB_ACTOR: tulio3101
+2026-10-02T12:54:17.2165061Z   GH_AW_GITHUB_REPOSITORY: tulio3101/skills-agentic-workflows-that-read-the-room
+2026-10-02T12:54:17.2166615Z   GH_AW_GITHUB_RUN_ID: 37009434551
+2026-10-02T12:54:17.2168910Z   GH_AW_GITHUB_WORKSPACE: /home/runner/work/skills-agentic-workflows-that-read-the-room/skills-agentic-workflows-that-read-the-room
+2026-10-02T12:54:17.2172226Z   GH_AW_MCP_CLI_SERVERS_LIST: - `github` — run `github --help` to see available tools
+- `safeoutputs` — run `safeoutputs --help` to see available tools
+2026-10-02T12:54:17.2174445Z ##[endgroup]
+2026-10-02T12:54:17.3770374Z [substitutePlaceholders] /home/runner/work/_temp/gh-aw/aw-prompts/prompt.txt (9 substitution(s))

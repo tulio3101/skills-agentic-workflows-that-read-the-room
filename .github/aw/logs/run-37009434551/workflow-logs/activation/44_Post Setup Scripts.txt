@@ -1,0 +1,7 @@
+﻿2026-10-02T12:54:20.3932014Z Post job cleanup.
+2026-10-02T12:54:20.4491525Z [info] [otlp] sending conclusion span "gh-aw.activation.conclusion" to configured endpoints
+2026-10-02T12:54:20.4542994Z [info] [otlp] conclusion span export attempted
+2026-10-02T12:54:20.4550692Z Cleaning up /tmp/gh-aw...
+2026-10-02T12:54:20.4779730Z Cleaned up /tmp/gh-aw
+2026-10-02T12:54:20.4931132Z No /tmp/awf-*-chroot-home directories found
+2026-10-02T12:54:20.5070800Z No /tmp/awf-chroot-* directories found

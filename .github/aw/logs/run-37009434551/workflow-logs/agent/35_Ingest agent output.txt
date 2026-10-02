@@ -1,0 +1,55 @@
+﻿2026-10-02T12:56:06.8924374Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-02T12:56:06.8924816Z with:
+2026-10-02T12:56:06.8926021Z   script: const path = require('path');
+const actionsDir = path.join(process.env.RUNNER_TEMP, 'gh-aw', 'actions');
+const { setupGlobals } = require(path.join(actionsDir, 'setup_globals.cjs'));
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require(path.join(actionsDir, 'collect_ndjson_output.cjs'));
+await main();
+
+2026-10-02T12:56:06.8930180Z   github-token: ***
+2026-10-02T12:56:06.8930427Z   debug: false
+2026-10-02T12:56:06.8930667Z   user-agent: actions/github-script
+2026-10-02T12:56:06.8930956Z   result-encoding: json
+2026-10-02T12:56:06.8931189Z   retries: 0
+2026-10-02T12:56:06.8931441Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-02T12:56:06.8931755Z env:
+2026-10-02T12:56:06.8931974Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-02T12:56:06.8932272Z   OTEL_SERVICE_NAME: gh-aw.update-github-info
+2026-10-02T12:56:06.8933228Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=update-github-info,gh-aw.repository=tulio3101/skills-agentic-workflows-that-read-the-room,gh-aw.run.id=37009434551,github.run_id=37009434551,gh-aw.engine.id=copilot
+2026-10-02T12:56:06.8934177Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-02T12:56:06.8934470Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-02T12:56:06.8934781Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-02T12:56:06.8935035Z   DEFAULT_BRANCH: main
+2026-10-02T12:56:06.8935287Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-10-02T12:56:06.8935540Z   GH_AW_ASSETS_BRANCH: 
+2026-10-02T12:56:06.8935776Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-10-02T12:56:06.8936071Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-10-02T12:56:06.8936387Z   GH_AW_PR_HEAD_BASE_BRANCH: 
+2026-10-02T12:56:06.8936817Z   GH_AW_PR_HEAD_BASE_PR_NUMBER: 
+2026-10-02T12:56:06.8937083Z   GH_AW_PR_HEAD_BASE_REF: 
+2026-10-02T12:56:06.8937326Z   GH_AW_PR_HEAD_BASE_REPO: 
+2026-10-02T12:56:06.8937574Z   GH_AW_PR_HEAD_BASE_SHA: 
+2026-10-02T12:56:06.8937817Z   GH_AW_PR_HEAD_REPO: 
+2026-10-02T12:56:06.8938048Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-02T12:56:06.8938328Z   GH_AW_WORKFLOW_ID_SANITIZED: updategithubinfo
+2026-10-02T12:56:06.8938692Z   GITHUB_AW_OTEL_TRACE_ID: 9fa952b16203220e216a5b911ab52033
+2026-10-02T12:56:06.8939061Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 1d1ebd5615e2b455
+2026-10-02T12:56:06.8939639Z   GITHUB_AW_OTEL_JOB_START_MS: 1790945672274
+2026-10-02T12:56:06.8940079Z   GH_AW_SAFE_OUTPUTS: /home/runner/work/_temp/gh-aw/safeoutputs/outputs.jsonl
+2026-10-02T12:56:06.8940616Z   GH_AW_ALLOWED_DOMAINS: awesome-copilot.github.com,github.blog,github.com
+2026-10-02T12:56:06.8941057Z   GITHUB_SERVER_URL: https://github.com
+2026-10-02T12:56:06.8941368Z   GITHUB_API_URL: https://api.github.com
+2026-10-02T12:56:06.8941656Z ##[endgroup]
+2026-10-02T12:56:06.9967449Z Loaded validation config from /home/runner/work/_temp/gh-aw/safeoutputs/validation.json
+2026-10-02T12:56:06.9976078Z Found 1 unique mentions in text
+2026-10-02T12:56:07.3773239Z Cached 1 recent collaborators for optimistic resolution
+2026-10-02T12:56:07.3774329Z Resolved 0 mentions via individual API calls
+2026-10-02T12:56:07.3775090Z Total allowed mentions: 1
+2026-10-02T12:56:07.3775857Z [OUTPUT COLLECTOR] Allowed mentions: tulio3101
+2026-10-02T12:56:07.3776719Z [INGESTION] Reading config from: /home/runner/work/_temp/gh-aw/safeoutputs/config.json
+2026-10-02T12:56:07.3783364Z [INGESTION] Raw config content: {"create_pull_request":{"draft":true,"max":1,"max_patch_files":100,"max_patch_size":4096,"protect_top_level_dot_folders":true,"protected_files":["package.json","bun.lockb","bunfig.toml","deno.json","deno.jsonc","deno.lock","global.json","NuGet.Config","Directory.Packages.props","mix.exs","mix.lock","go.mod","go.sum","stack.yaml","stack.yaml.lock","pom.xml","build.gradle","build.gradle.kts","settings.gradle","settings.gradle.kts","gradle.properties","package-lock.json","yarn.lock","pnpm-lock.yaml","npm-shrinkwrap.json","requirements.txt","Pipfile","Pipfile.lock","pyproject.toml","setup.py","setup.cfg","Gemfile","Gemfile.lock","uv.lock","CODEOWNERS","DESIGN.md","README.md","CONTRIBUTING.md","SECURITY.md","CODE_OF_CONDUCT.md","AGENTS.md"],"protected_files_policy":"request-review"},"create_report_incomplete_issue":{},"missing_data":{},"missing_tool":{},"noop":{"max":1,"report-as-issue":"false"},"report_incomplete":{}}
+2026-10-02T12:56:07.3792020Z [INGESTION] Parsed config keys: ["create_pull_request","create_report_incomplete_issue","missing_data","missing_tool","noop","report_incomplete"]
+2026-10-02T12:56:07.3793582Z [INGESTION] Output file path: /home/runner/work/_temp/gh-aw/safeoutputs/outputs.jsonl
+2026-10-02T12:56:07.3795456Z Output file does not exist: /home/runner/work/_temp/gh-aw/safeoutputs/outputs.jsonl — no safe-output items were emitted; treating as empty collection (graceful no-op)
+2026-10-02T12:56:07.3796782Z Stored empty collection to: /tmp/gh-aw/agent_output.json

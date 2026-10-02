@@ -1,0 +1,46 @@
+﻿2026-10-02T12:56:51.9394960Z ##[group]Run github/gh-aw-actions/setup@924af5fdc64061cfbf66fb584c8b07e2ac230c60
+2026-10-02T12:56:51.9396605Z with:
+2026-10-02T12:56:51.9397253Z   destination: /home/runner/work/_temp/gh-aw/actions
+2026-10-02T12:56:51.9398035Z   job-name: safe_outputs
+2026-10-02T12:56:51.9398623Z   trace-id: 9fa952b16203220e216a5b911ab52033
+2026-10-02T12:56:51.9399292Z   parent-span-id: 17924c4c1d8a5f2e
+2026-10-02T12:56:51.9399926Z   safe-output-artifact-client: false
+2026-10-02T12:56:51.9401024Z env:
+2026-10-02T12:56:51.9401512Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-02T12:56:51.9402115Z   OTEL_SERVICE_NAME: gh-aw.update-github-info
+2026-10-02T12:56:51.9403731Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=update-github-info,gh-aw.repository=tulio3101/skills-agentic-workflows-that-read-the-room,gh-aw.run.id=37009434551,github.run_id=37009434551,gh-aw.engine.id=copilot
+2026-10-02T12:56:51.9405338Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-02T12:56:51.9405899Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-02T12:56:51.9406545Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-02T12:56:51.9407051Z   GH_AW_AGENT_AIC: 
+2026-10-02T12:56:51.9407487Z   GH_AW_AIC: 
+2026-10-02T12:56:51.9407917Z   GH_AW_AMBIENT_CONTEXT: 
+2026-10-02T12:56:51.9408756Z   GH_AW_CALLER_WORKFLOW_ID: tulio3101/skills-agentic-workflows-that-read-the-room/update-github-info
+2026-10-02T12:56:51.9409711Z   GH_AW_DETECTION_CONCLUSION: warning
+2026-10-02T12:56:51.9410294Z   GH_AW_DETECTION_REASON: agent_failure
+2026-10-02T12:56:51.9411082Z   GH_AW_ENGINE_ID: copilot
+2026-10-02T12:56:51.9411608Z   GH_AW_ENGINE_MODEL: gpt-4o
+2026-10-02T12:56:51.9412120Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-02T12:56:51.9412623Z   GH_AW_THREAT_DETECTION_AIC: 
+2026-10-02T12:56:51.9413159Z   GH_AW_WORKFLOW_ID: update-github-info
+2026-10-02T12:56:51.9413748Z   GH_AW_WORKFLOW_NAME: update-github-info
+2026-10-02T12:56:51.9415257Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/tulio3101/skills-agentic-workflows-that-read-the-room/blob/main/.github/workflows/update-github-info.md
+2026-10-02T12:56:51.9416520Z   GH_AW_SETUP_WORKFLOW_NAME: update-github-info
+2026-10-02T12:56:51.9417828Z   GH_AW_CURRENT_WORKFLOW_REF: tulio3101/skills-agentic-workflows-that-read-the-room/.github/workflows/update-github-info.lock.yml@refs/heads/main
+2026-10-02T12:56:51.9419016Z   GH_AW_INFO_VERSION: 1.0.87
+2026-10-02T12:56:51.9419528Z   GH_AW_INFO_AWF_VERSION: v0.28.23
+2026-10-02T12:56:51.9420057Z   GH_AW_INFO_ENGINE_ID: copilot
+2026-10-02T12:56:51.9420933Z ##[endgroup]
+2026-10-02T12:56:54.8200463Z Successfully copied 515 files to /home/runner/work/_temp/gh-aw/actions
+2026-10-02T12:56:55.1339425Z Successfully copied 26 mcp-scripts files to /home/runner/work/_temp/gh-aw/mcp-scripts
+2026-10-02T12:56:55.2903953Z Successfully copied 88 safe-outputs files to /home/runner/work/_temp/gh-aw/safeoutputs
+2026-10-02T12:56:55.3745982Z [info] [otlp] INPUT_TRACE_ID=9fa952b16203220e216a5b911ab52033 (will reuse activation trace)
+2026-10-02T12:56:55.3755879Z [info] [otlp] INPUT_PARENT_SPAN_ID=17924c4c1d8a5f2e (will parent setup span)
+2026-10-02T12:56:55.3788266Z [info] [otlp] no OTLP endpoints have usable credentials, skipping setup span
+2026-10-02T12:56:55.3828850Z [info] [otlp] resolved trace-id=9fa952b16203220e216a5b911ab52033
+2026-10-02T12:56:55.3835065Z [info] [otlp] trace-id=9fa952b16203220e216a5b911ab52033 written to GITHUB_OUTPUT
+2026-10-02T12:56:55.3840107Z [info] [otlp] span-id=b58902fa89a85370 written to GITHUB_OUTPUT
+2026-10-02T12:56:55.3844491Z [info] [otlp] parent-span-id=17924c4c1d8a5f2e written to GITHUB_OUTPUT
+2026-10-02T12:56:55.3848344Z [info] [otlp] GITHUB_AW_OTEL_TRACE_ID written to GITHUB_ENV
+2026-10-02T12:56:55.3852413Z [info] [otlp] GITHUB_AW_OTEL_PARENT_SPAN_ID written to GITHUB_ENV
+2026-10-02T12:56:55.3858654Z [info] [otlp] GITHUB_AW_OTEL_JOB_START_MS written to GITHUB_ENV

@@ -1,0 +1,56 @@
+﻿2026-10-02T12:56:08.8720490Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+2026-10-02T12:56:08.8720963Z with:
+2026-10-02T12:56:08.8721192Z   name: agent-output-fallback
+2026-10-02T12:56:08.8722600Z   path: /tmp/gh-aw/agent_output.json
+/tmp/gh-aw/safeoutputs.jsonl
+/tmp/gh-aw/agent_execution.json
+/tmp/gh-aw/agent_usage.jsonl
+/tmp/gh-aw/agent_usage.json
+/tmp/gh-aw/sandbox/firewall-audit-logs/api-proxy-logs/token-usage.jsonl
+/tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+/tmp/gh-aw/sandbox/firewall/audit/api-proxy-logs/token-usage.jsonl
+
+2026-10-02T12:56:08.8724221Z   if-no-files-found: ignore
+2026-10-02T12:56:08.8724484Z   compression-level: 6
+2026-10-02T12:56:08.8724716Z   overwrite: false
+2026-10-02T12:56:08.8724944Z   include-hidden-files: false
+2026-10-02T12:56:08.8725199Z   archive: true
+2026-10-02T12:56:08.8725403Z env:
+2026-10-02T12:56:08.8725611Z   OTEL_EXPORTER_OTLP_ENDPOINT: 
+2026-10-02T12:56:08.8725911Z   OTEL_SERVICE_NAME: gh-aw.update-github-info
+2026-10-02T12:56:08.8726860Z   OTEL_RESOURCE_ATTRIBUTES: gh-aw.workflow.name=update-github-info,gh-aw.repository=tulio3101/skills-agentic-workflows-that-read-the-room,gh-aw.run.id=37009434551,github.run_id=37009434551,gh-aw.engine.id=copilot
+2026-10-02T12:56:08.8727812Z   OTEL_EXPORTER_OTLP_HEADERS: 
+2026-10-02T12:56:08.8728107Z   GH_AW_OTLP_ENDPOINTS: [{"url":"","headers":""}]
+2026-10-02T12:56:08.8728419Z   GH_AW_OTLP_IF_MISSING: ignore
+2026-10-02T12:56:08.8728685Z   DEFAULT_BRANCH: main
+2026-10-02T12:56:08.8728931Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-10-02T12:56:08.8729181Z   GH_AW_ASSETS_BRANCH: 
+2026-10-02T12:56:08.8729691Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-10-02T12:56:08.8730005Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-10-02T12:56:08.8730325Z   GH_AW_PR_HEAD_BASE_BRANCH: 
+2026-10-02T12:56:08.8730584Z   GH_AW_PR_HEAD_BASE_PR_NUMBER: 
+2026-10-02T12:56:08.8730849Z   GH_AW_PR_HEAD_BASE_REF: 
+2026-10-02T12:56:08.8731091Z   GH_AW_PR_HEAD_BASE_REPO: 
+2026-10-02T12:56:08.8731341Z   GH_AW_PR_HEAD_BASE_SHA: 
+2026-10-02T12:56:08.8731587Z   GH_AW_PR_HEAD_REPO: 
+2026-10-02T12:56:08.8731815Z   GH_AW_RUNTIME_FEATURES: 
+2026-10-02T12:56:08.8732089Z   GH_AW_WORKFLOW_ID_SANITIZED: updategithubinfo
+2026-10-02T12:56:08.8732450Z   GITHUB_AW_OTEL_TRACE_ID: 9fa952b16203220e216a5b911ab52033
+2026-10-02T12:56:08.8732811Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 1d1ebd5615e2b455
+2026-10-02T12:56:08.8733141Z   GITHUB_AW_OTEL_JOB_START_MS: 1790945672274
+2026-10-02T12:56:08.8733473Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-10-02T12:56:08.8733780Z ##[endgroup]
+2026-10-02T12:56:09.0177096Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-10-02T12:56:09.0180441Z The least common ancestor is /tmp/gh-aw. This will be the root directory of the artifact
+2026-10-02T12:56:09.0181324Z With the provided path, there will be 3 files uploaded
+2026-10-02T12:56:09.0182152Z Artifact name is valid!
+2026-10-02T12:56:09.0182574Z Root directory input is valid!
+2026-10-02T12:56:09.3648010Z Uploading artifact: agent-output-fallback.zip
+2026-10-02T12:56:09.3693090Z Beginning upload of artifact content to blob storage
+2026-10-02T12:56:09.5827749Z Uploaded bytes 583
+2026-10-02T12:56:09.6337866Z Finished uploading artifact content to blob storage!
+2026-10-02T12:56:09.6339050Z SHA256 digest of uploaded artifact is f031bfd32fe03a4614d5a7e3a23fbb9b19924e9d615032561acdfa61443d66bc
+2026-10-02T12:56:09.6340489Z Finalizing artifact upload
+2026-10-02T12:56:09.9844108Z Artifact agent-output-fallback successfully finalized. Artifact ID 11227023551
+2026-10-02T12:56:09.9845177Z Artifact agent-output-fallback has been successfully uploaded! Final size is 583 bytes. Artifact ID is 11227023551
+2026-10-02T12:56:09.9848942Z Artifact download URL: https://github.com/tulio3101/skills-agentic-workflows-that-read-the-room/actions/runs/37009434551/artifacts/11227023551
