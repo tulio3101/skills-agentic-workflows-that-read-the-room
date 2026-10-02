@@ -2,7 +2,7 @@
 name: update-github-info
 description: Refresh the GitHub Info page with concise, practical updates from official GitHub sources.
 engine: copilot
-model: gpt-4o
+model: gpt-5-mini
 on:
   schedule: daily
   workflow_dispatch:
