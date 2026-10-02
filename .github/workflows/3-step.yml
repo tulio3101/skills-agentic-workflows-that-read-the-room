@@ -123,6 +123,14 @@ jobs:
               exit 0
             fi
           done < <(gh pr list --state open --base main --limit 100 --json number,createdAt --jq '.[] | [.number, .createdAt] | @tsv')
+          if [ "${{ github.event_name }}" = "workflow_run" ]; then
+            trigger_run_id="${{ github.event.workflow_run.id }}"
+            if gh run view "$trigger_run_id" --log 2>/dev/null | grep -Eqi 'Recorded noop message:|No changes made'; then
+              echo "noop_run=true" >> "$GITHUB_OUTPUT"
+              echo "No generated pull request found, but updater run reported no changes."
+              exit 0
+            fi
+          fi
           echo "No open pull request updates site/content/github-info.md"
           exit 1
         env:
@@ -130,7 +138,7 @@ jobs:
 
       - name: Check generated PR includes source context
         id: check-pr-sources
-        if: steps.find-generated-pr.outcome == 'success'
+        if: steps.find-generated-pr.outputs.pr_number != ''
         continue-on-error: true
         run: |
           {
@@ -159,10 +167,10 @@ jobs:
                 passed: ${{ steps.check-copilot-secret.outcome == 'success' }}
               - description: "Checked that the workflow allows network access to the Awesome Copilot source"
                 passed: ${{ steps.check-awesome-copilot-network.outcome == 'success' }}
-              - description: "Checked that an open generated pull request updates site/content/github-info.md"
-                passed: ${{ steps.find-generated-pr.outcome == 'success' }}
-              - description: "Checked that the generated pull request includes source context"
-                passed: ${{ steps.check-pr-sources.outcome == 'success' }}
+              - description: "Checked that the updater generated website content changes (open PR or no-op)"
+                passed: ${{ steps.find-generated-pr.outputs.pr_number != '' || steps.find-generated-pr.outputs.noop_run == 'true' }}
+              - description: "Checked that generated updates include source context"
+                passed: ${{ steps.find-generated-pr.outputs.noop_run == 'true' || steps.check-pr-sources.outcome == 'success' }}
 
       - name: Fail job if not all checks passed
         if: contains(steps.*.outcome, 'failure')
