@@ -1,6 +1,7 @@
 ---
 name: update-github-info
 description: Refresh the GitHub Info page with concise, practical updates from official GitHub sources.
+
 engine:
   id: copilot
   model: gpt-4.1
@@ -38,5 +39,6 @@ Keep Mona's GitHub Info page current with concise, practical guidance for develo
   - https://awesome-copilot.github.com/workflows/
 3. Select only recent updates and useful workflows that help developers and fit Mona's editorial angle.
 4. Update only `site/content/github-info.md`. Keep summaries short and practical, and include the official source for every blog, changelog, or Awesome Copilot update.
+
 5. Review the resulting diff for accuracy, clarity, and unnecessary changes.
 6. Use the `create_pull_request` safe output to open one draft pull request containing the update for Mona to review. Do not push directly to the default branch.
